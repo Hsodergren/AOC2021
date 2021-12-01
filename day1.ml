@@ -12,7 +12,6 @@ let rec part2 input =
   | hd1::(hd2::hd3::_ as tl) -> hd1+hd2+hd3::part2 tl
   | _ -> []
 
-let () =
+let solutions =
   let input = parse_file input_file in
-  Printf.printf "%d\n" @@ part1 input;
-  Printf.printf "%d\n" @@ part1 (part2 input)
+  part1 input, part1 (part2 input)
