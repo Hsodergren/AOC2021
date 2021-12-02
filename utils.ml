@@ -6,3 +6,6 @@ let map_lines f file =
     | exception End_of_file -> close_in inc; []
   in
   loop ()
+
+let map_lines_str f str =
+  String.split_on_char '\n' str |> List.map f
