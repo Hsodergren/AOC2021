@@ -3,7 +3,7 @@ let to_uni = function
   | '1' -> `One
   | _ -> failwith "error"
 
-let parse_line str =
+let parse_line str : [<`One | `Zero] array =
   Seq.unfold (fun i -> try Some (String.get str i |> to_uni, succ i) with _ -> None) 0
   |> List.of_seq
   |> Array.of_list
