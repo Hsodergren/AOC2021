@@ -1,2 +1,4 @@
 (library
-  (name aoc2021))
+ (name aoc2021)
+ (libraries angstrom)
+ (preprocess (pps ppx_deriving.ord)))
