@@ -9,3 +9,5 @@ let map_lines f file =
 
 let map_lines_str f str =
   String.split_on_char '\n' str |> List.map f
+
+let read_file f = map_lines Fun.id f |> String.concat "\n"
