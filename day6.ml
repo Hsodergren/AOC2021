@@ -34,4 +34,6 @@ let stepf_p2 fishes =
 let test = parse_file input_file
 
 let part1 = simulate 80 test stepf_p1 |> List.length
-let part2 = simulate 256 (init test) stepf_p2 |> FishMap.bindings |> List.fold_left (fun acc (_,v) -> acc+v) 0
+let part2 = simulate 256 (init test) stepf_p2
+            |> FishMap.bindings
+            |> List.fold_left (fun acc (_,v) -> acc+v) 0
